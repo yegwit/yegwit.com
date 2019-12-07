@@ -3,17 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ .Title }}</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+  {{ $cssOpts := (dict "targetPath" "assets/main.css" ) }}
+  {{ if .Site.IsServer }}
+    {{ $styles := resources.Get "sass/styles.scss" | toCSS $cssOpts }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+  {{ else }}
+    {{ $styles := resources.Get "sass/styles.scss" | toCSS $cssOpts | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}"  integrity="{{ $styles.Data.Integrity }}" media="screen">
+  {{ end }}
 </head>
 <body>
 
-<h1><img src="yegwit-owl-small-square.png" alt="YEGWIT Owl Avatar"></h1>
+<div class="container">
+	<img src="yegwit-owl-small-square.png" alt="YEGWIT Owl Mascot">
 
-<a href="https://twitter.com/yegwit"><i class="fab fa-twitter"></i></a>
-<a href="https://www.instagram.com/yegwit/"><i class="fab fa-instagram"></i></a>
-<a href="https://github.com/yegwit"><i class="fab fa-github"></i></a>
-<a href="https://www.eventbrite.com/o/yeg-women-in-tech-26752827013"><i class="far fa-calendar-alt"></i></a>
+	<div>
+		<header>
+			<h1>YEGWIT</h1>
+			<p>Edmonton Women in Tech</p>
+		</header>
 
+		<nav>
+			<a href="https://twitter.com/yegwit"><i class="fab fa-twitter"></i></a>
+			<a href="https://www.instagram.com/yegwit/"><i class="fab fa-instagram"></i></a>
+			<a href="https://github.com/yegwit"><i class="fab fa-github"></i></a>
+			<a href="https://www.eventbrite.com/o/yeg-women-in-tech-26752827013"><i class="far fa-calendar-alt"></i></a>
+		</nav>
+	</div>
+</div>
 
 </body>
 </html>

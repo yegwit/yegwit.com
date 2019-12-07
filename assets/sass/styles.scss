@@ -1,0 +1,44 @@
+body {
+	font-family: sans-serif;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-end;
+}
+
+
+h1 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 6em;
+	margin: 0;
+}
+
+header p {
+	margin: 0;
+}
+
+header img {
+}
+
+nav {
+	a {
+		color: black;
+	}
+	a:hover {
+		color: purple;
+	}
+}
+
+nav i {
+	font-size: 2em;
+	margin: 0.5em 0.5em 0 0;
+}
+
