@@ -8,6 +8,9 @@ order = [".png$", ".jpg$", ".gif$", ".svg$"]
 [[deployment.targets]]
 URL = "s3://yegwit.com?region=ca-central-1"
 
+# If you are using a CloudFront CDN, deploy will invalidate the cache as needed.
+cloudFrontDistributionID = "EHLLV3A1OCEXR"
+
 [[deployment.matchers]]
 # Cache static assets for 20 years.
 pattern = "^.+\\.(js|css|png|jpg|gif|svg|ttf)$"
