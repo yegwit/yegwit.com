@@ -1,44 +1,55 @@
 body {
-	font-family: sans-serif;
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	min-height: 100vh;
+  font-family: sans-serif;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: nowrap;
 }
 
 
 h1 {
-	font-family: 'Quicksand', sans-serif;
-	font-size: 6em;
-	margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3em;
+  margin: 0;
 }
 
 header p {
-	margin: 0;
+  margin: 0;
 }
 
-header img {
+
+img.mascot {
+  width: 40%;
 }
 
 nav {
-	a {
-		color: black;
-	}
-	a:hover {
-		color: purple;
-	}
+  a {
+    color: black;
+  }
+  a:hover {
+    color: purple;
+  }
 }
 
 nav i {
-	font-size: 2em;
-	margin: 0.5em 0.5em 0 0;
+  font-size: 2em;
+  margin: 0.5em 0.5em 0 0;
 }
 
+@media only screen and (min-width: 800px) {
+  img.mascot {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 6em;
+  }
+}
