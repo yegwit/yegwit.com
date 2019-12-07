@@ -10,8 +10,8 @@
     {{ $styles := resources.Get "sass/styles.scss" | toCSS $cssOpts }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
   {{ else }}
-    {{ $styles := resources.Get "sass/styles.scss" | toCSS $cssOpts | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}"  integrity="{{ $styles.Data.Integrity }}" media="screen">
+    {{ $styles := resources.Get "sass/styles.scss" | toCSS $cssOpts | minify }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
   {{ end }}
 </head>
 <body>
