@@ -5,6 +5,7 @@
   <title>{{ .Title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Quicksand:500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
   {{ $cssOpts := (dict "targetPath" "assets/main.css" ) }}
   {{ if .Site.IsServer }}
@@ -17,23 +18,32 @@
 </head>
 <body>
 
-<div class="container">
-	<img class="mascot" src="yegwit-owl-small-square.png" alt="YEGWIT Owl Mascot">
+  <div class="container">
+  	<img class="mascot" src="yegwit-owl-small-square.png" alt="YEGWIT Owl Mascot">
 
-	<div>
-		<header>
-			<h1>YEGWIT</h1>
-			<p>Edmonton Women in Tech</p>
-		</header>
+  	<div>
+  		<header>
+  			<h1>YEGWIT</h1>
+  			<p>Edmonton Women in Tech</p>
+  		</header>
+  		<nav>
+  			<a href="https://twitter.com/yegwit"><i class="fab fa-twitter"></i></a>
+  			<a href="https://www.instagram.com/yegwit/"><i class="fab fa-instagram"></i></a>
+  			<a href="https://github.com/yegwit"><i class="fab fa-github"></i></a>
+  			<a href="https://www.eventbrite.com/o/yeg-women-in-tech-26752827013"><i class="far fa-calendar-alt"></i></a>
+        <a href="/email-sign-up.html"><i class="far fa-envelope"></i></a>
+  		</nav>
+  	</div>
 
-		<nav>
-			<a href="https://twitter.com/yegwit"><i class="fab fa-twitter"></i></a>
-			<a href="https://www.instagram.com/yegwit/"><i class="fab fa-instagram"></i></a>
-			<a href="https://github.com/yegwit"><i class="fab fa-github"></i></a>
-			<a href="https://www.eventbrite.com/o/yeg-women-in-tech-26752827013"><i class="far fa-calendar-alt"></i></a>
-		</nav>
-	</div>
-</div>
+  </div>
+  <main>
+    <p>YEGWIT aims to build a strong and safe group for women and allies in tech
+      with the goal of fostering engagement, providing mentorship, and
+      creating community. We want to establish a group that allows individuals
+      to share ideas, concerns, thoughts and actions, to create an
+      equitable environment within the industry.</p>
+    <p>YEGWIT: Foster, Validate, Empower.</p>
+  </main>
 
 </body>
 </html>
