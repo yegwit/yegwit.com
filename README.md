@@ -2,7 +2,7 @@
 The YEGWIT Website
 
 ## To Develop:
-# Mac Installation:
+### Mac Installation:
 We use hugo! `brew install hugo`
-# To run:
+### To run:
 `./watch.sh`
